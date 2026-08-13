@@ -3,201 +3,436 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Morning Delight Bakery</title>
+
+<title>C Morning Bakery</title>
+
+<meta name="description" content="C Morning Bakery - Freshly baked pastries every morning and freshly prepared sandwiches from 11 AM.">
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    background:#fdf8f3;
-    color:#333;
+html {
+    scroll-behavior: smooth;
 }
 
-header{
-    background:#8b4513;
-    color:white;
-    text-align:center;
-    padding:30px;
+body {
+    font-family: Arial, sans-serif;
+    background: #fffaf3;
+    color: #333;
+    line-height: 1.6;
 }
 
-nav{
-    background:#5c3317;
-    text-align:center;
-    padding:15px;
+/* HEADER */
+
+header {
+    background: #6b3518;
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 15px;
-    font-weight:bold;
+header h1 {
+    font-size: 42px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
 }
 
-.hero{
-    text-align:center;
-    padding:60px 20px;
+header p {
+    font-size: 18px;
 }
 
-.hero h1{
-    font-size:3rem;
-    margin-bottom:15px;
+/* NAVIGATION */
+
+nav {
+    background: #3d1f0f;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.hero p{
-    font-size:1.2rem;
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
 }
 
-section{
-    padding:50px 20px;
-    max-width:1000px;
-    margin:auto;
+nav a:hover {
+    color: #f5c27a;
 }
 
-.menu-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
+/* HERO */
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: #f8e4c8;
 }
 
-.card{
-    background:white;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
-    text-align:center;
+.hero h2 {
+    font-size: 36px;
+    color: #6b3518;
+    margin-bottom: 15px;
 }
 
-.card h3{
-    margin-bottom:10px;
-    color:#8b4513;
+.hero p {
+    max-width: 650px;
+    margin: auto;
+    font-size: 18px;
 }
 
-.hours{
-    background:#fff1e6;
-    border-radius:10px;
-    padding:20px;
+.button {
+    display: inline-block;
+    margin-top: 25px;
+    background: #6b3518;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-footer{
-    background:#8b4513;
-    color:white;
-    text-align:center;
-    padding:20px;
+/* SECTIONS */
+
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
 }
+
+section h2 {
+    text-align: center;
+    color: #6b3518;
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+/* MENU */
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    color: #6b3518;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+/* SANDWICH SECTION */
+
+.sandwich-section {
+    background: #f8e4c8;
+    max-width: none;
+}
+
+.sandwich-content {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.time {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #6b3518;
+    margin-bottom: 30px;
+}
+
+/* HOURS */
+
+.hours {
+    text-align: center;
+}
+
+.hours p {
+    margin: 8px 0;
+}
+
+/* CONTACT */
+
+.contact {
+    text-align: center;
+    background: white;
+}
+
+.contact p {
+    margin: 10px 0;
+}
+
+/* FOOTER */
+
+footer {
+    background: #3d1f0f;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 7px;
+    }
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-    <h1>Morning Delight Bakery</h1>
-    <p>Fresh Pastries, Pies & Sandwiches Every Day</p>
+
+    <h1>C MORNING BAKERY</h1>
+
+    <p>Freshly Baked Every Morning</p>
+
 </header>
 
+
 <nav>
+
+    <a href="#home">Home</a>
+
     <a href="#breakfast">Breakfast</a>
+
     <a href="#sandwiches">Sandwiches</a>
+
     <a href="#hours">Opening Hours</a>
+
     <a href="#contact">Contact</a>
+
 </nav>
 
-<section class="hero">
-    <h1>Welcome to Morning Delight Bakery</h1>
-    <p>Start your day with freshly baked pastries and delicious coffee.</p>
-</section>
 
-<section id="breakfast">
-    <h2>Breakfast Menu</h2>
-    <br>
+<section class="hero" id="home">
 
-    <div class="menu-grid">
+    <h2>Start Your Morning Fresh</h2>
 
-        <div class="card">
-            <h3>Croissant</h3>
-            <p>Fresh buttery croissant baked daily.</p>
-        </div>
-
-        <div class="card">
-            <h3>Pain au Chocolat</h3>
-            <p>Flaky pastry with rich chocolate filling.</p>
-        </div>
-
-        <div class="card">
-            <h3>Apple Pie</h3>
-            <p>Traditional apple pie with a golden crust.</p>
-        </div>
-
-        <div class="card">
-            <h3>Muffins</h3>
-            <p>Fresh blueberry and chocolate muffins.</p>
-        </div>
-
-    </div>
-</section>
-
-<section id="sandwiches">
-    <h2>Fresh Sandwiches</h2>
-    <br>
     <p>
-        Every day from <strong>11:00 AM</strong>, our kitchen begins preparing
-        freshly made sandwiches.
+        Welcome to C Morning Bakery.
+        Enjoy freshly baked pastries, delicious breakfast treats
+        and freshly prepared sandwiches made with care.
     </p>
 
-    <br>
+    <a href="#breakfast" class="button">
+        Explore Our Menu
+    </a>
+
+</section>
+
+
+<section id="breakfast">
+
+    <h2>Our Breakfast</h2>
 
     <div class="menu-grid">
 
         <div class="card">
-            <h3>Chicken Sandwich</h3>
-            <p>Fresh chicken, lettuce and tomato.</p>
+
+            <div class="icon">🥐</div>
+
+            <h3>Croissant</h3>
+
+            <p>
+                Freshly baked, golden and buttery croissants.
+            </p>
+
         </div>
 
-        <div class="card">
-            <h3>Tuna Sandwich</h3>
-            <p>Homemade tuna mix on fresh bread.</p>
-        </div>
 
         <div class="card">
-            <h3>Ham & Cheese</h3>
-            <p>Classic ham and melted cheese.</p>
+
+            <div class="icon">🍫</div>
+
+            <h3>Pain au Chocolat</h3>
+
+            <p>
+                Flaky French pastry filled with delicious chocolate.
+            </p>
+
         </div>
 
+
         <div class="card">
-            <h3>Vegetarian Sandwich</h3>
-            <p>Fresh vegetables and house dressing.</p>
+
+            <div class="icon">🥧</div>
+
+            <h3>Apple Pie</h3>
+
+            <p>
+                Delicious apple filling surrounded by golden pastry.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🧁</div>
+
+            <h3>Fresh Muffins</h3>
+
+            <p>
+                Soft and delicious muffins prepared fresh.
+            </p>
+
         </div>
 
     </div>
+
 </section>
+
+
+<section class="sandwich-section" id="sandwiches">
+
+    <div class="sandwich-content">
+
+        <h2>Fresh Sandwiches</h2>
+
+        <p class="time">
+            🕚 Sandwich production begins from 11:00 AM
+        </p>
+
+
+        <div class="menu-grid">
+
+            <div class="card">
+
+                <div class="icon">🥪</div>
+
+                <h3>Chicken Sandwich</h3>
+
+                <p>
+                    Freshly prepared chicken with salad and our special dressing.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">🐟</div>
+
+                <h3>Tuna Sandwich</h3>
+
+                <p>
+                    Delicious tuna filling prepared fresh every day.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">🧀</div>
+
+                <h3>Ham & Cheese</h3>
+
+                <p>
+                    A classic combination prepared with fresh ingredients.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">🥬</div>
+
+                <h3>Vegetarian Sandwich</h3>
+
+                <p>
+                    Fresh vegetables and delicious dressing.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
 
 <section id="hours">
+
+    <h2>Opening Hours</h2>
+
     <div class="hours">
-        <h2>Opening Hours</h2>
+
+        <p><strong>Monday – Friday:</strong> 6:00 AM – 6:00 PM</p>
+
+        <p><strong>Saturday:</strong> 7:00 AM – 5:00 PM</p>
+
+        <p><strong>Sunday:</strong> Closed</p>
+
         <br>
-        <p>Monday - Friday: 6:00 AM - 6:00 PM</p>
-        <p>Saturday: 7:00 AM - 5:00 PM</p>
-        <p>Sunday: Closed</p>
-        <br>
-        <p><strong>Fresh sandwiches available from 11:00 AM.</strong></p>
+
+        <p>
+            Fresh sandwiches available from <strong>11:00 AM</strong>.
+        </p>
+
     </div>
+
 </section>
 
-<section id="contact">
-    <h2>Contact Us</h2>
-    <br>
-    <p>📍 Your Bakery Address</p>
-    <p>📞 +33 00 00 00 00 00</p>
-    <p>✉️ info@morningdelightbakery.com</p>
+
+<section class="contact" id="contact">
+
+    <h2>Visit C Morning Bakery</h2>
+
+    <p>📍 London, United Kingdom</p>
+
+    <p>📞 Phone number coming soon</p>
+
+    <p>✉️ Email coming soon</p>
+
 </section>
+
 
 <footer>
-    <p>&copy; 2026 Morning Delight Bakery. All Rights Reserved.</p>
+
+    <p>
+        © 2026 C Morning Bakery. All Rights Reserved.
+    </p>
+
 </footer>
+
 
 </body>
 </html>
