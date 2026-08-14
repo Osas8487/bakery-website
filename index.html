@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>C Morning Bakery</title>
+<title>C Morning Bakery | Freshly Baked Every Morning</title>
 
-<meta name="description" content="C Morning Bakery - Freshly baked pastries every morning and freshly prepared sandwiches from 11 AM.">
+<meta name="description" content="C Morning Bakery - Freshly baked pastries, delicious breakfast treats and freshly prepared sandwiches in London.">
 
 <style>
 
@@ -18,7 +18,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 70px;
+    scroll-padding-top: 75px;
 }
 
 body {
@@ -28,22 +28,26 @@ body {
     line-height: 1.6;
 }
 
+/* HEADER */
+
 header {
     background: #6b3518;
     color: white;
     text-align: center;
-    padding: 45px 20px;
+    padding: 38px 20px;
 }
 
 header h1 {
     font-size: 42px;
     letter-spacing: 2px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 header p {
     font-size: 18px;
 }
+
+/* NAVIGATION */
 
 nav {
     background: #3d1f0f;
@@ -65,75 +69,129 @@ nav a:hover {
     color: #f5c27a;
 }
 
+/* HERO */
+
 .hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     padding: 80px 20px;
-    background: #f8e4c8;
+    background:
+        linear-gradient(rgba(60, 30, 15, 0.55), rgba(60, 30, 15, 0.55)),
+        #f8e4c8;
+}
+
+.hero-content {
+    max-width: 750px;
+    color: white;
 }
 
 .hero h2 {
-    font-size: 36px;
-    color: #6b3518;
-    margin-bottom: 15px;
+    font-size: 48px;
+    line-height: 1.15;
+    margin-bottom: 20px;
 }
 
 .hero p {
+    font-size: 20px;
     max-width: 650px;
     margin: auto;
-    font-size: 18px;
+}
+
+.hero-tagline {
+    font-size: 16px !important;
+    margin-top: 18px !important;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .button {
     display: inline-block;
-    margin-top: 25px;
-    background: #6b3518;
-    color: white;
-    padding: 13px 25px;
-    border-radius: 6px;
+    margin-top: 30px;
+    background: #f5c27a;
+    color: #3d1f0f;
+    padding: 14px 28px;
+    border-radius: 7px;
     text-decoration: none;
     font-weight: bold;
+    font-size: 17px;
 }
+
+.button:hover {
+    background: white;
+}
+
+/* SECTIONS */
 
 section {
     max-width: 1100px;
     margin: auto;
-    padding: 60px 20px;
+    padding: 70px 20px;
 }
 
 section h2 {
     text-align: center;
     color: #6b3518;
-    font-size: 30px;
-    margin-bottom: 35px;
+    font-size: 32px;
+    margin-bottom: 12px;
 }
+
+.section-intro {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 40px;
+    color: #666;
+}
+
+/* PRODUCT GRID */
 
 .menu-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
 }
+
+/* PRODUCT CARD */
 
 .card {
     background: white;
-    padding: 20px;
     text-align: center;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.10);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .card img {
+    display: block;
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 15px;
+}
+
+.card-content {
+    padding: 22px 18px 25px;
 }
 
 .card h3 {
     color: #6b3518;
-    margin-bottom: 10px;
+    margin-bottom: 9px;
     font-size: 22px;
 }
+
+.card p {
+    color: #666;
+    font-size: 15px;
+}
+
+/* SANDWICH SECTION */
 
 .sandwich-section {
     background: #f8e4c8;
@@ -147,19 +205,23 @@ section h2 {
 
 .time {
     text-align: center;
-    font-size: 20px;
+    font-size: 19px;
     font-weight: bold;
     color: #6b3518;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
+
+/* HOURS */
 
 .hours {
     text-align: center;
 }
 
 .hours p {
-    margin: 8px 0;
+    margin: 9px 0;
 }
+
+/* CONTACT */
 
 .contact {
     text-align: center;
@@ -170,6 +232,8 @@ section h2 {
     margin: 10px 0;
 }
 
+/* FOOTER */
+
 footer {
     background: #3d1f0f;
     color: white;
@@ -177,19 +241,42 @@ footer {
     padding: 25px 15px;
 }
 
+/* MOBILE */
+
 @media (max-width: 600px) {
 
     header h1 {
         font-size: 32px;
     }
 
+    .hero {
+        min-height: 450px;
+        padding: 60px 20px;
+    }
+
     .hero h2 {
-        font-size: 28px;
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
     }
 
     nav a {
         display: inline-block;
         margin: 5px 7px;
+    }
+
+    section {
+        padding: 55px 15px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        height: 230px;
     }
 
 }
@@ -200,91 +287,184 @@ footer {
 <body>
 
 <header>
+
     <h1>C MORNING BAKERY</h1>
+
     <p>Freshly Baked Every Morning</p>
+
 </header>
 
+
 <nav>
+
     <a href="#home">Home</a>
+
     <a href="#breakfast">Breakfast</a>
+
     <a href="#sandwiches">Sandwiches</a>
+
     <a href="#hours">Opening Hours</a>
+
     <a href="#contact">Contact</a>
+
 </nav>
+
+
+<!-- HOMEPAGE -->
 
 <section class="hero" id="home">
 
-    <h2>Start Your Morning Fresh</h2>
+    <div class="hero-content">
 
-    <p>
-        Welcome to C Morning Bakery.
-        Enjoy freshly baked pastries, delicious breakfast treats
-        and freshly prepared sandwiches made with care.
-    </p>
+        <h2>Freshly Baked.<br>Made for Your Morning.</h2>
 
-    <a href="#breakfast" class="button">
-        Explore Our Menu
-    </a>
+        <p>
+            Start your day with freshly baked pastries,
+            delicious breakfast treats and carefully prepared
+            food from C Morning Bakery.
+        </p>
 
-</section>
+        <p class="hero-tagline">
+            FRESH • SIMPLE • DELICIOUS
+        </p>
 
-<section id="breakfast">
-
-    <h2>Our Breakfast</h2>
-
-    <div class="menu-grid">
-
-        <div class="card">
-            <img src="Croissant.jpg" alt="Fresh Croissant">
-            <h3>Croissant</h3>
-            <p>
-                Freshly baked, golden and buttery croissants.
-            </p>
-        </div>
-
-        <div class="card">
-            <img src="Pain-au-chocolat.jpg" alt="Pain au Chocolat">
-            <h3>Pain au Chocolat</h3>
-            <p>
-                Flaky French pastry filled with delicious chocolate.
-            </p>
-        </div>
-
-        <div class="card">
-            <img src="Apple-turnover.jpg" alt="Apple Turnover">
-            <h3>Apple Turnover</h3>
-            <p>
-                Golden flaky pastry filled with delicious apple filling.
-            </p>
-        </div>
-
-        <div class="card">
-            <img src="pain-au-raisin.jpg" alt="Pain au Raisin">
-            <h3>Pain au Raisin</h3>
-            <p>
-                A delicious French pastry with raisins and a rich filling.
-            </p>
-        </div>
-
-        <div class="card">
-            <img src="pain-suisse-custard-chocolate.jpg" alt="Pain Suisse with Custard and Chocolate">
-            <h3>Pain Suisse</h3>
-            <p>
-                A delicious pastry filled with creamy custard and chocolate.
-            </p>
-        </div>
-
-        <div class="card">
-            <img src="blueberry-muffins.jpg" alt="Blueberry Muffins">
-            <h3>Blueberry Muffins</h3>
-            <p> 
-                Soft, delicious muffins filled with juicy blueberries.
-            </p>
-        </div>
+        <a href="#breakfast" class="button">
+            Explore Our Pastries
+        </a>
 
     </div>
 
 </section>
+
+
+<!-- BREAKFAST -->
+
+<section id="breakfast">
+
+    <h2>Our Freshly Baked Pastries</h2>
+
+    <p class="section-intro">
+        Freshly baked favourites prepared with care
+        for your morning.
+    </p>
+
+    <div class="menu-grid">
+
+
+        <div class="card">
+
+            <img src="Croissant.jpg" alt="Fresh Croissant">
+
+            <div class="card-content">
+
+                <h3>Croissant</h3>
+
+                <p>
+                    Golden, flaky and buttery.
+                    Freshly baked every morning.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <img src="Pain-au-chocolat.jpg" alt="Pain au Chocolat">
+
+            <div class="card-content">
+
+                <h3>Pain au Chocolat</h3>
+
+                <p>
+                    Flaky French pastry filled
+                    with delicious chocolate.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <img src="Apple-turnover.jpg" alt="Apple Turnover">
+
+            <div class="card-content">
+
+                <h3>Apple Turnover</h3>
+
+                <p>
+                    Golden flaky pastry filled
+                    with delicious apple filling.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <img src="pain-au-raisin.jpg" alt="Pain au Raisin">
+
+            <div class="card-content">
+
+                <h3>Pain au Raisin</h3>
+
+                <p>
+                    A delicious French pastry
+                    with raisins and a rich filling.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <img src="pain-suisse-custard-chocolate.jpg" alt="Pain Suisse with Custard and Chocolate">
+
+            <div class="card-content">
+
+                <h3>Pain Suisse</h3>
+
+                <p>
+                    Soft pastry filled with creamy
+                    custard and chocolate.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <img src="blueberry-muffins.jpg" alt="Blueberry Muffins">
+
+            <div class="card-content">
+
+                <h3>Blueberry Muffins</h3>
+
+                <p>
+                    Soft and delicious muffins
+                    filled with juicy blueberries.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- SANDWICHES -->
 
 <section class="sandwich-section" id="sandwiches">
 
@@ -293,38 +473,75 @@ footer {
         <h2>Fresh Sandwiches</h2>
 
         <p class="time">
-            🕚 Sandwich production begins from 11:00 AM
+            Sandwich production begins from 11:00 AM
         </p>
 
         <div class="menu-grid">
 
-            <div class="card">
-                <h3>Chicken Sandwich</h3>
-                <p>
-                    Freshly prepared chicken with salad and our special dressing.
-                </p>
-            </div>
 
             <div class="card">
-                <h3>Tuna Sandwich</h3>
-                <p>
-                    Delicious tuna filling prepared fresh every day.
-                </p>
+
+                <div class="card-content">
+
+                    <h3>Chicken Sandwich</h3>
+
+                    <p>
+                        Freshly prepared chicken with salad
+                        and our special dressing.
+                    </p>
+
+                </div>
+
             </div>
 
-            <div class="card">
-                <h3>Ham &amp; Cheese</h3>
-                <p>
-                    A classic combination prepared with fresh ingredients.
-                </p>
-            </div>
 
             <div class="card">
-                <h3>Vegetarian Sandwich</h3>
-                <p>
-                    Fresh vegetables and delicious dressing.
-                </p>
+
+                <div class="card-content">
+
+                    <h3>Tuna Sandwich</h3>
+
+                    <p>
+                        Delicious tuna filling
+                        prepared fresh every day.
+                    </p>
+
+                </div>
+
             </div>
+
+
+            <div class="card">
+
+                <div class="card-content">
+
+                    <h3>Ham &amp; Cheese</h3>
+
+                    <p>
+                        A classic combination prepared
+                        with fresh ingredients.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-content">
+
+                    <h3>Vegetarian Sandwich</h3>
+
+                    <p>
+                        Fresh vegetables and
+                        delicious dressing.
+                    </p>
+
+                </div>
+
+            </div>
+
 
         </div>
 
@@ -332,9 +549,16 @@ footer {
 
 </section>
 
+
+<!-- OPENING HOURS -->
+
 <section id="hours">
 
     <h2>Opening Hours</h2>
+
+    <p class="section-intro">
+        Come and enjoy something freshly baked.
+    </p>
 
     <div class="hours">
 
@@ -364,6 +588,9 @@ footer {
 
 </section>
 
+
+<!-- CONTACT -->
+
 <section class="contact" id="contact">
 
     <h2>Visit C Morning Bakery</h2>
@@ -376,6 +603,7 @@ footer {
 
 </section>
 
+
 <footer>
 
     <p>
@@ -384,5 +612,6 @@ footer {
 
 </footer>
 
+
 </body>
-</html>
+</html> 
